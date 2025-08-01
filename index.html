@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berita Tsunami Terkini</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef3f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #005c99;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    .berita {
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .berita h2 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .berita p {
+      color: #555;
+    }
+
+    .detail {
+      display: none;
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Berita Tsunami Terkini</h1>
+    <p>Update informasi bencana alam terbaru</p>
+  </header>
+
+  <div class="container">
+    <div class="berita">
+      <h2>Tsunami Melanda Wilayah Aceh</h2>
+      <p>01 Agustus 2025 - Gempa bermagnitudo 7.4 menyebabkan tsunami kecil di pesisir Aceh.</p>
+      <button onclick="toggleDetail(this)">Lihat Detail</button>
+      <div class="detail">
+        <p>BPBD melaporkan tidak ada korban jiwa namun beberapa rumah rusak ringan. Warga diminta tetap waspada akan gempa susulan.</p>
+      </div>
+    </div>
+
+    <div class="berita">
+      <h2>Peringatan Dini Tsunami di Sulawesi</h2>
+      <p>31 Juli 2025 - BMKG mengeluarkan peringatan dini tsunami akibat gempa bawah laut di Laut Maluku.</p>
+      <button onclick="toggleDetail(this)">Lihat Detail</button>
+      <div class="detail">
+        <p>Peringatan sudah dicabut. Aktivitas laut kembali normal namun nelayan diminta berhati-hati.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetail(button) {
+      const detail = button.nextElementSibling;
+      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
